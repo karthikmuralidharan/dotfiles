@@ -1,1 +1,0 @@
-/Users/karthik/.dotfiles/config/fish/functions/__execute_as_bundler.fish

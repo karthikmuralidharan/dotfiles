@@ -1,1 +1,0 @@
-/Users/karthik/.config/fisherman/thefuck/functions/fuck.fish

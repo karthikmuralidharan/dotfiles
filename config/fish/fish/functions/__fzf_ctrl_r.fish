@@ -1,1 +1,0 @@
-/Users/karthik/.dotfiles/config/fish/functions/__fzf_ctrl_r.fish

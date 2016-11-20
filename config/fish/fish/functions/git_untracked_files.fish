@@ -1,1 +1,0 @@
-/Users/karthik/.dotfiles/config/fish/functions/git_untracked_files.fish

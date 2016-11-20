@@ -1,1 +1,0 @@
-/Users/karthik/.dotfiles/config/fish/conf.d/__fzf_check.fish

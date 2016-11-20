@@ -1,1 +1,0 @@
-/Users/karthik/.config/fisherman/emacs/emacs.fish

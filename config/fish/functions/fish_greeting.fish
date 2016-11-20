@@ -1,1 +1,0 @@
-/Users/karthik/.config/fisherman/bobthefish/fish_greeting.fish

@@ -1,1 +1,3 @@
-/Users/karthik/.dotfiles/rcrc
+DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-private"
+EXCLUDES="*:README.md"
+UNDOTTED="bin"

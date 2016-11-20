@@ -1,1 +1,0 @@
-/Users/karthik/.config/fisherman/await/functions/await.fish

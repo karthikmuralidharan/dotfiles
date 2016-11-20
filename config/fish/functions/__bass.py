@@ -1,1 +1,0 @@
-/Users/karthik/.config/fisherman/bass/functions/__bass.py
