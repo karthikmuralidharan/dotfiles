@@ -1,0 +1,1 @@
+/Users/karthik/.dotfiles/config/fish/functions/git_is_tag.fish

@@ -1,0 +1,1 @@
+/Users/karthik/.dotfiles/config/fish/functions/__is_a_bundled_executable.fish

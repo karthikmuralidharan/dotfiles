@@ -1,0 +1,1 @@
+/Users/karthik/.config/fisherman/emacs/functions/eframe.fish

@@ -1,0 +1,1 @@
+/Users/karthik/.dotfiles/config/fish/functions/alias.fish

@@ -1,0 +1,1 @@
+/Users/karthik/.config/fisherman/rbenv/completions/rbenv.fish

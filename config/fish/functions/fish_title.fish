@@ -1,0 +1,1 @@
+/Users/karthik/.config/fisherman/bobthefish/fish_title.fish

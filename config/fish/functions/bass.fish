@@ -1,0 +1,1 @@
+/Users/karthik/.config/fisherman/bass/functions/bass.fish
