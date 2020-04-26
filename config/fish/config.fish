@@ -17,7 +17,7 @@ set -gx PATH \
     /usr/sbin \
     /sbin \
     /usr/local/opt/openjdk/bin \
-    $HOME/bin \
+    $HOME/.bin \
     $HOME/.rbenv/shims \
     $HOME/.ngs/bin \
     $GOPATH/bin $GOROOT/bin /usr/local/opt/go/libexec/bin \
