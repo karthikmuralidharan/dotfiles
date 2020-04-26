@@ -1,1 +1,87 @@
-/Users/karthik/.dotfiles/bin/setup_mac
+#!/bin/sh
+
+# Welcome to the thoughtbot laptop script!
+# Be prepared to turn your laptop (or desktop, no haters here)
+# into an awesome development machine.
+
+fancy_echo() {
+  local fmt="$1"; shift
+
+  # shellcheck disable=SC2059
+  printf "\\n$fmt\\n" "$@"
+}
+
+brew bundle --file=- <<EOF
+tap "thoughtbot/formulae"
+tap "homebrew/services"
+tap "universal-ctags/universal-ctags"
+tap "homebrew/cask-fonts"
+tap "railwaycat/emacsmacport"
+
+# Unix
+brew "universal-ctags", args: ["HEAD"]
+brew "git"
+brew "openssl"
+brew "rcm"
+brew "reattach-to-user-namespace"
+brew "the_silver_searcher"
+brew "rg"
+brew "tmux"
+brew "vim"
+brew "watchman"
+brew "zsh"
+brew "fish"
+brew "rbenv"
+brew "fzf"
+brew "tldr"
+brew "jq"
+brew "plantuml"
+brew "direnv"
+brew "graphviz"
+
+# GitHub
+brew "hub"
+
+# Image manipulation
+brew "imagemagick"
+
+# Programming language prerequisites and package managers
+brew "libyaml" # should come after openssl
+brew "coreutils"
+brew "yarn"
+brew "go"
+brew "borkdude/brew/babashka"
+cask "gpg-suite"
+
+# Databases
+brew "postgres", restart_service: :changed
+brew "redis", restart_service: :changed
+
+# Emacs
+cask "emacs-mac-spacemacs-icon"
+
+# Fonts
+cask "font-firacode-nerd-font"
+cask "font-fira-code"
+
+# Applications
+cask "aws-vault"
+cask "spectacle"
+cask "iterm2"
+cask "intellij-idea"
+cask "lastpass"
+cask "appcleaner"
+cask "dash"
+cask "google-chrome"
+cask "intellij-idea"
+cask "iterm2"
+cask "postico"
+cask "slack"
+cask "visual-studio-code"
+cask "the-unarchiver"
+cask "adobe-acrobat-reader"
+cask "macs-fan-control"
+cask "sourcetree"
+EOF
+
+fancy_echo "All brew installations complete!!"
