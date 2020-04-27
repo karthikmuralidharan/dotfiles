@@ -48,10 +48,14 @@ set -g theme_display_date no
 set -g theme_color_scheme dark
 
 # init direnv
-eval (direnv hook fish)
+if type -q direnv
+   eval (direnv hook fish)
+end
 
 # init rbenv
-rbenv init - | source
+if type -q rbenv
+   rbenv init - | source
+end
 
 # init nvm
 set -g NVM_DIR $HOME/.nvm
@@ -63,4 +67,3 @@ function vi; nvim $argv; end
 function prune_branches
   git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 end
-
