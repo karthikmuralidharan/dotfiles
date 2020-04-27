@@ -52,6 +52,7 @@ brew "yarn"
 brew "go"
 brew "borkdude/brew/babashka"
 cask "gpg-suite"
+cask "corretto"
 
 # Databases
 brew "postgres", restart_service: :changed
