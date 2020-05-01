@@ -6,6 +6,24 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
+# locale
+set -gx LC_ALL en_US.UTF-8
+set -gx LC_CTYPE en_US.UTF-8
+
+## jruby
+set -gx JRUBY_OPTS "-Xcext.enabled=true --debug"
+set -gx GTAGSLABEL "pygments"
+
+# go
+set -gx GOPATH $HOME/go
+set -gx GOROOT /usr/local/opt/go/libexec
+set -gx GO111MODULE on
+
+# JDK - setting default version to corretto
+set -gx CPPFLAGS "-I/usr/local/opt/openjdk/include"
+set -gx JAVA_VERSION 11
+set -x JAVA_HOME (/usr/libexec/java_home -v $JAVA_VERSION)
+
 # Executable paths
 set -gx PATH \
     /usr/local/opt/coreutils/libexec/gnubin \
@@ -20,26 +38,12 @@ set -gx PATH \
     $HOME/.bin \
     $HOME/.rbenv/shims \
     $HOME/.ngs/bin \
-    $GOPATH/bin $GOROOT/bin /usr/local/opt/go/libexec/bin \
+    $GOPATH/bin \
+    $GOROOT/bin \
+    /usr/local/opt/go/libexec/bin \
     /usr/local/opt/flutter/bin \
     /usr/local/opt/sqlite/bin \
     /usr/local/opt/ipython@5/bin
-
-# locale
-set -gx LC_ALL en_US.UTF-8
-set -gx LC_CTYPE en_US.UTF-8
-
-## jruby
-set -gx JRUBY_OPTS "-Xcext.enabled=true --debug"
-set -gx GTAGSLABEL "pygments"
-
-# go
-set -gx GOPATH $HOME/go
-set -gx GOROOT /usr/local/opt/go/libexec
-set -gx GO111MODULE on
-
-# JDK
-set -gx CPPFLAGS "-I/usr/local/opt/openjdk/include"
 
 # Theme configurations for bobthefish
 set -g theme_display_ruby no
