@@ -4,7 +4,18 @@ if not functions -q fisher
     fish -c fisher
 end
 
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+function vterm_printf
+    if [ -n "$TMUX" ]
+        # tell tmux to pass the escape sequences through
+        # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
+        printf "\ePtmux;\e\e]%s\007\e\\" "$argv"
+    else if string match -q -- "screen*" "$TERM"
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$argv"
+    else
+        printf "\e]%s\e\\" "$argv"
+    end
+end
 
 # locale
 set -gx LC_ALL en_US.UTF-8
@@ -53,21 +64,28 @@ set -g theme_color_scheme dark
 
 # init direnv
 if type -q direnv
-   eval (direnv hook fish)
+    eval (direnv hook fish)
 end
 
 # init rbenv
 if type -q rbenv
-   rbenv init - | source
+    rbenv init - | source
 end
 
 # init nvm
 set -g NVM_DIR $HOME/.nvm
 
 ## functions
-function vim; nvim $argv; end
-function vi; nvim $argv; end
+function vim
+    nvim $argv
+end
+function vi
+    nvim $argv
+end
 
 function prune_branches
-  git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+    git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths

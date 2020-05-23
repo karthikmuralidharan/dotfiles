@@ -27,7 +27,7 @@ brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "rg"
 brew "tmux"
-brew "vim"
+brew "nvim"
 brew "watchman"
 brew "zsh"
 brew "fish"
@@ -38,9 +38,6 @@ brew "jq"
 brew "plantuml"
 brew "direnv"
 brew "graphviz"
-
-# GitHub
-brew "hub"
 
 # Image manipulation
 brew "imagemagick"
@@ -59,7 +56,7 @@ brew "postgres", restart_service: :changed
 brew "redis", restart_service: :changed
 
 # Emacs
-cask "emacs-mac-spacemacs-icon"
+brew "emacs-mac --with-modules"
 
 # Fonts
 cask "font-firacode-nerd-font"
@@ -80,9 +77,9 @@ cask "postico"
 cask "slack"
 cask "visual-studio-code"
 cask "the-unarchiver"
-cask "adobe-acrobat-reader"
 cask "macs-fan-control"
 cask "sourcetree"
+cask "alfred"
 EOF
 
 fancy_echo "All brew installations complete!!"
