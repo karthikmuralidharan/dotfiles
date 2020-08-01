@@ -54,7 +54,8 @@ set -gx PATH \
     /usr/local/opt/go/libexec/bin \
     /usr/local/opt/flutter/bin \
     /usr/local/opt/sqlite/bin \
-    /usr/local/opt/ipython@5/bin
+    /usr/local/opt/ipython@5/bin \
+    $HOME/.emacs.d/bin
 
 # Theme configurations for bobthefish
 set -g theme_display_ruby no
