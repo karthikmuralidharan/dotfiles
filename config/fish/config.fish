@@ -55,7 +55,8 @@ set -gx PATH \
     /usr/local/opt/flutter/bin \
     /usr/local/opt/sqlite/bin \
     /usr/local/opt/ipython@5/bin \
-    $HOME/.emacs.d/bin
+    $HOME/.emacs.d/bin \
+    $HOME/anaconda3/bin
 
 # Theme configurations for bobthefish
 set -g theme_display_ruby no
@@ -80,6 +81,7 @@ set -g NVM_DIR $HOME/.nvm
 function vim
     nvim $argv
 end
+
 function vi
     nvim $argv
 end
@@ -90,3 +92,12 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths
+
+if type -q conda
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    source $HOME/anaconda3/etc/fish/conf.d/conda.fish
+    # <<< conda initialize <<<
+end
+
+
