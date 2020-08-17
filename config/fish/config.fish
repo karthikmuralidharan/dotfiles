@@ -4,6 +4,8 @@ if not functions -q fisher
     fish -c fisher
 end
 
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+
 function vterm_printf
     if [ -n "$TMUX" ]
         # tell tmux to pass the escape sequences through
@@ -46,7 +48,7 @@ set -gx PATH \
     /usr/sbin \
     /sbin \
     /usr/local/opt/openjdk/bin \
-    $HOME/.bin \
+    $HOME/bin \
     $HOME/.rbenv/shims \
     $HOME/.ngs/bin \
     $GOPATH/bin \
@@ -77,7 +79,7 @@ end
 # init nvm
 set -g NVM_DIR $HOME/.nvm
 
-## functions
+## aliases
 function vim
     nvim $argv
 end
@@ -90,14 +92,10 @@ function prune_branches
     git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 end
 
-test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths
 
 if type -q conda
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
     source $HOME/anaconda3/etc/fish/conf.d/conda.fish
-    # <<< conda initialize <<<
 end
 
 
