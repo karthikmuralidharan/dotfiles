@@ -7,7 +7,7 @@ end
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
 # Load all saved ssh keys
-/usr/bin/ssh-add -A ^/dev/null
+/usr/bin/ssh-add --apple-load-keychain ^/dev/null
 
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555'  'brblack'
