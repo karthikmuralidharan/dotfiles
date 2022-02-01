@@ -3,7 +3,7 @@
 	name = Karthik Muralidharan
 	email = mkarthik91@gmail.com
 [core]
-	excludesfile = /Users/karthik/.gitignore_global
+	excludesfile = /Users/karthik.muralidharan/.gitignore_global
 	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
