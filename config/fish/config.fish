@@ -42,7 +42,7 @@ set -gx GTAGSLABEL "pygments"
 
 # go
 set -gx GOPATH $HOME/go
-set -gx GOROOT /usr/local/opt/go/libexec
+set -gx GOROOT /opt/homebrew/opt/go/libexec/
 set -gx GO111MODULE on
 
 # JDK - setting default version to corretto
