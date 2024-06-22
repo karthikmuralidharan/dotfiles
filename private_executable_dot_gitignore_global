@@ -1,0 +1,42 @@
+## mac
+.DS_Store
+
+## tern
+.tern-project
+
+## ruby 
+.ruby-version
+
+## node
+node_modules
+
+## aws
+.elasticbeanstalk/.npmrc
+.elasticbeanstalk/config.yml
+
+## tags 
+.tags*
+tags
+
+## idea
+.idea
+*.iml
+
+## vagrant 
+.vagrant
+
+## zsh
+zhistory
+
+## vscode
+.vscode/
+
+## emacs
+dump.rdb
+.projectile
+.emacs.saves/
+.#*
+*~
+
+## vc
+stCommitMsg
