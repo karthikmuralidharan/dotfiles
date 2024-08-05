@@ -1,0 +1,2 @@
+abbr start_openwebui "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui -e WEBUI_AUTH=False --restart always ghcr.io/open-webui/open-webui:main"
+abbr stop_openwebui "docker stop open-webui && docker rm open-webui"
