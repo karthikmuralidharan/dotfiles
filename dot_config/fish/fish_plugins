@@ -9,3 +9,5 @@ oh-my-fish/plugin-brew
 oh-my-fish/plugin-ssh-config.d
 oh-my-fish/plugin-sublime
 oh-my-fish/plugin-direnv
+reitzig/sdkman-for-fish
+oh-my-fish/plugin-wifi-password

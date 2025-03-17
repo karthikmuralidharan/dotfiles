@@ -1,3 +1,24 @@
 # locale
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
+
+# app development settings
+ACTIVE_ENV=development
+
+# Go
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export NVM_DIR=~HOME/.nvm
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/karthik.muralidharan/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/karthik.muralidharan/.sdkman"
+[[ -s "/Users/karthik.muralidharan/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/karthik.muralidharan/.sdkman/bin/sdkman-init.sh"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/karthik.muralidharan/.cache/lm-studio/bin"
