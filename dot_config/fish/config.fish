@@ -12,6 +12,7 @@ source (/opt/homebrew/bin/starship init fish --print-full-init | psub)
 # Aliases
 source ~/.config/fish/config_aliases.fish
 source ~/.config/fish/config_secrets.fish
+source ~/.config/fish/config_asdf.fish
 
 # Created by `pipx` on 2024-10-19 07:36:25
 set PATH $PATH /Users/karthik.muralidharan/.local/bin
